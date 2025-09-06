@@ -8,29 +8,40 @@ const InformacaoUsuario = () => {
   const navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_USER_URL;
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (userID.trim()) {
-      try {
-        const response = await axios.post(API_URL, { userID });
-        console.log('User saved:', response.data);
-        sessionStorage.setItem('userID', userID);
-        navigate('/Quiz'); 
-      } catch (error) {
-        console.error('Error saving user:', error);
-      }
+      // 1. AÇÕES IMEDIATAS PARA O USUÁRIO
+      sessionStorage.setItem('userID', userID);
+      navigate('/Quiz'); 
+
+      // 2. A REQUISIÇÃO É ENVIADA EM SEGUNDO PLANO (FIRE-AND-FORGET)
+      // Removemos o 'await', então o código não espera aqui.
+      axios.post(API_URL, { userID })
+        .then(response => {
+          // Opcional: Logar o sucesso no console quando a resposta chegar.
+          console.log('User saved in background:', response.data);
+        })
+        .catch(error => {
+          // Opcional: Logar o erro no console se a requisição falhar.
+          console.error('Background error saving user:', error);
+        });
     }
   };
 
-  const handleAnonymousSubmit = async () => {
-    try {
-      const response = await axios.post(API_URL, { userID: 'Anonymous' });
-      console.log('Anonymous user saved:', response.data);
-      sessionStorage.setItem('userID', 'Anonymous');
-      navigate('/Quiz');
-    } catch (error) {
-      console.error('Error saving anonymous user:', error);
-    }
+  const handleAnonymousSubmit = () => {
+    // 1. AÇÕES IMEDIATAS PARA O USUÁRIO
+    sessionStorage.setItem('userID', 'Anonymous');
+    navigate('/Quiz');
+
+    // 2. A REQUISIÇÃO É ENVIADA EM SEGUNDO PLANO
+    axios.post(API_URL, { userID: 'Anonymous' })
+      .then(response => {
+        console.log('Anonymous user saved in background:', response.data);
+      })
+      .catch(error => {
+        console.error('Background error saving anonymous user:', error);
+      });
   };
 
   return (

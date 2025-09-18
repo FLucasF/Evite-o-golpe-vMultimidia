@@ -1,163 +1,562 @@
 [
     {
-        "questionID": "P1",
-        "imageName": ".../../assets/quiz/whatsapp.png",
-        "phase": "1",
-        "question": "Qual prática ajuda a evitar golpes no WhatsApp?",
-        "answers": ["Não clicar em links de mensagens de números suspeitos", "Clicar em todos os links recebidos", "Compartilhar suas informações pessoais", "Desativar a verificação em duas etapas"],
-        "correct": "Não clicar em links de mensagens de números suspeitos"
+    "questionID": "P1",
+    "imageName": ".../../assets/quiz/whatsapp.png",
+    "phase": "1",
+    "question": "Qual prática ajuda a evitar golpes no WhatsApp?",
+    "answers": [
+      {
+        "text": "Não clicar em links de mensagens de números suspeitos",
+        "isCorrect": true,
+        "justification": "Links suspeitos são a principal porta de entrada para golpes."
+      },
+      {
+        "text": "Clicar em todos os links recebidos",
+        "isCorrect": false,
+        "justification": "Isso pode levar você a sites falsos que roubam seus dados."
+      },
+      {
+        "text": "Compartilhar suas informações pessoais",
+        "isCorrect": false,
+        "justification": "Divulgar informações facilita fraudes e roubos de identidade."
+      },
+      {
+        "text": "Desativar a verificação em duas etapas",
+        "isCorrect": false,
+        "justification": "Isso remove uma camada essencial de proteção da conta."
+      }
+    ]
+  },
+  {
+    "questionID": "P2",
+    "imageName": ".../../assets/quiz/facebook.png",
+    "phase": "1",
+    "question": "Qual prática ajuda a evitar golpes no Facebook?",
+    "answers": [
+      {
+        "text": "Compartilhar dados privados com estranhos",
+        "isCorrect": false,
+        "justification": "Compartilhar informações pessoais facilita golpes e clonagens."
+      },
+      {
+        "text": "Clicar em links de propagandas das publicações de páginas suspeitas",
+        "isCorrect": false,
+        "justification": "Esses links podem direcionar para sites de phishing."
+      },
+      {
+        "text": "Desconfiar de qualquer postagem com um preço milagroso",
+        "isCorrect": true,
+        "justification": "Ofertas boas demais geralmente escondem golpes."
+      },
+      {
+        "text": "Acreditar em quaisquer notícias publicadas sem checar a veracidade das mesmas",
+        "isCorrect": false,
+        "justification": "A falta de checagem pode levar à desinformação ou fraudes."
+      }
+    ]
+  },
+  {
+    "questionID": "P3",
+    "imageName": ".../../assets/quiz/instagram.png",
+    "phase": "1",
+    "question": "O que é importante fazer para evitar golpes no Instagram?",
+    "answers": [
+      {
+        "text": "Colocar data de nascimento como senha do Instagram",
+        "isCorrect": false,
+        "justification": "Senhas fracas são facilmente descobertas."
+      },
+      {
+        "text": "Deixar número de telefone antigo associado à conta",
+        "isCorrect": false,
+        "justification": "Um telefone desatualizado impede a recuperação da conta."
+      },
+      {
+        "text": "Habilitar verificação em duas etapas",
+        "isCorrect": true,
+        "justification": "Esse recurso adiciona proteção contra invasões."
+      },
+      {
+        "text": "Desabilitar configurações de segurança",
+        "isCorrect": false,
+        "justification": "Isso torna sua conta mais vulnerável a ataques."
+      }
+    ]
+  },
+  {
+    "questionID": "P4",
+    "imageName": ".../../assets/quiz/banco.png",
+    "phase": "1",
+    "question": "Como se proteger contra golpes bancários?",
+    "answers": [
+      {
+        "text": "Olhar o nome de quem é o destinatário da transferência antes de enviar",
+        "isCorrect": true,
+        "justification": "Verificar o destinatário evita transferências para golpistas."
+      },
+      {
+        "text": "Usar no aplicativo bancário a mesma senha usada no e-mail",
+        "isCorrect": false,
+        "justification": "Senhas repetidas aumentam o risco em caso de vazamentos."
+      },
+      {
+        "text": "Deixar senhas anotadas em papéis guardados na carteira",
+        "isCorrect": false,
+        "justification": "Se a carteira for perdida, suas contas ficam expostas."
+      },
+      {
+        "text": "Usar senhas curtas e fáceis de lembrar",
+        "isCorrect": false,
+        "justification": "Senhas fracas são facilmente descobertas por golpistas."
+      }
+    ]
+  },
+  {
+    "questionID": "P5",
+    "imageName": ".../../assets/quiz/loja_online.png",
+    "phase": "1",
+    "question": "O que devemos suspeitar ao comprar em uma loja online? (Marque a opção incorreta)",
+    "answers": [
+      {
+        "text": "Valores muito abaixo do que é cobrado pelo mercado",
+        "isCorrect": false,
+        "justification": "Preços muito baixos podem indicar fraude."
+      },
+      {
+        "text": "Falta de outras fontes de informações sobre a empresa na Internet",
+        "isCorrect": false,
+        "justification": "Empresas confiáveis possuem histórico online verificável."
+      },
+      {
+        "text": "Não é preciso suspeitar de lojas online, pois são todas seguras",
+        "isCorrect": true,
+        "justification": "Essa é a incorreta: nem todas as lojas online são seguras."
+      },
+      {
+        "text": "Avisos de que a promoção está acabando em poucos instantes",
+        "isCorrect": false,
+        "justification": "Golpistas usam gatilhos de urgência para enganar consumidores."
+      }
+    ]
+  },
+  {
+    "questionID": "P6",
+    "imageName": ".../../assets/quiz/identidade.png",
+    "phase": "1",
+    "question": "Como devemos proteger a nossa identidade online?",
+    "answers": [
+      {
+        "text": "Usar a mesma senha em todas as nossas contas",
+        "isCorrect": false,
+        "justification": "Se uma senha vazar, todas as contas ficam comprometidas."
+      },
+      {
+        "text": "Atualizar regularmente as senhas das contas",
+        "isCorrect": true,
+        "justification": "Trocar senhas periodicamente aumenta a segurança."
+      },
+      {
+        "text": "Ignorar as notificações de aviso de acesso da conta",
+        "isCorrect": false,
+        "justification": "Ignorar alertas de segurança pode permitir invasões."
+      },
+      {
+        "text": "Fazer login com a conta em um site desconhecido",
+        "isCorrect": false,
+        "justification": "Sites desconhecidos podem roubar seus dados."
+      }
+    ]
+  },
+  {
+    "questionID": "P7",
+    "imageName": ".../../assets/quiz/caridade.png",
+    "phase": "1",
+    "question": "O que é importante verificar ao doar para caridade online?",
+    "answers": [
+      {
+        "text": "Clicar em qualquer link de doação e doar",
+        "isCorrect": false,
+        "justification": "Links falsos podem roubar seu dinheiro e dados."
+      },
+      {
+        "text": "Não verificar a existência da organização",
+        "isCorrect": false,
+        "justification": "ONGs falsas se passam por entidades legítimas."
+      },
+      {
+        "text": "Doar para organização popular independentemente da causa",
+        "isCorrect": false,
+        "justification": "Popularidade não garante legitimidade."
+      },
+      {
+        "text": "Verificar a existência da ONG",
+        "isCorrect": true,
+        "justification": "Confirmar a autenticidade evita golpes de caridade."
+      }
+    ]
+  },
+  {
+    "questionID": "P8",
+    "imageName": ".../../assets/quiz/phishing.png",
+    "phase": "1",
+    "question": "Como identificar tentativas de phishing (roubo de dados pessoais)?",
+    "answers": [
+      {
+        "text": "Clicar rapidamente nos links recebidos por e-mails desconhecidos",
+        "isCorrect": false,
+        "justification": "Clicar em links suspeitos abre portas para fraudes."
+      },
+      {
+        "text": "Fornecer as suas informações pessoais para qualquer site solicitado",
+        "isCorrect": false,
+        "justification": "Sites falsos pedem informações para aplicar golpes."
+      },
+      {
+        "text": "Verificar cuidadosamente os remetentes de e-mails",
+        "isCorrect": true,
+        "justification": "O remetente é um dos principais sinais de phishing."
+      },
+      {
+        "text": "Ignorar os avisos de segurança",
+        "isCorrect": false,
+        "justification": "Alertas de segurança ajudam a evitar golpes."
+      }
+    ]
+  },
+  {
+    "questionID": "P9",
+    "imageName": ".../../assets/quiz/proteger_senha.png",
+    "phase": "1",
+    "question": "Qual é a melhor prática para se proteger de golpes na internet?",
+    "answers": [
+      {
+        "text": "Compartilhar informações pessoais com estranhos",
+        "isCorrect": false,
+        "justification": "Isso expõe você a riscos de fraude."
+      },
+      {
+        "text": "Clicar em links suspeitos",
+        "isCorrect": false,
+        "justification": "Links maliciosos são usados para roubo de dados."
+      },
+      {
+        "text": "Manter senhas fortes e atualizadas",
+        "isCorrect": true,
+        "justification": "Senhas seguras protegem suas contas contra ataques."
+      },
+      {
+        "text": "Abrir anexos de e-mails de fontes desconhecidas",
+        "isCorrect": false,
+        "justification": "Arquivos suspeitos podem conter vírus ou spyware."
+      }
+    ]
+  },
+  {
+    "questionID": "P10",
+    "imageName": ".../../assets/quiz/fake_news.png",
+    "phase": "1",
+    "question": "O que é uma notícia falsa (FakeNews)?",
+    "answers": [
+      {
+        "text": "Uma notícia sensacionalista publicada em um jornal de renome",
+        "isCorrect": false,
+        "justification": "Notícia sensacionalista não é necessariamente falsa."
+      },
+      {
+        "text": "Uma notícia que contradiz suas crenças pessoais",
+        "isCorrect": false,
+        "justification": "Contrariar crenças não significa que seja falsa."
+      },
+      {
+        "text": "Uma notícia criada com o intuito de enganar e desinformar",
+        "isCorrect": true,
+        "justification": "Essa é a definição de Fake News."
+      },
+      {
+        "text": "Uma notícia que não possui fontes citadas",
+        "isCorrect": false,
+        "justification": "Falta de fontes enfraquece a credibilidade, mas não garante falsidade."
+      }
+    ]
     },
     {
-        "questionID": "P2",
-        "imageName": ".../../assets/quiz/facebook.png" ,
-        "phase": "1",
-        "question": "Qual prática ajuda a evitar golpes no Facebook?",
-        "answers": ["Compartilhar dados privados com estranhos", "Clicar em links de propagandas das publicações de páginas suspeitas", "Desconfiar de qualquer postagem com um preço milagroso", "Acreditar em quaisquer notícias publicadas sem checar a veracidade das mesmas"],
-        "correct": "Desconfiar de qualquer postagem com um preço milagroso"
-    },
-    {
-        "questionID": "P3",
-        "imageName": ".../../assets/quiz/instagram.png",
-        "phase": "1",
-        "question": "O que é importante fazer para evitar golpes no Instagram?",
-        "answers": ["Colocar data de nascimento como senha do Instagram", "Deixar número de telefone antigo associado à conta", "Habilitar verificação em duas etapas", "Desabilitar configurações de segurança"],
-        "correct": "Habilitar verificação em duas etapas"
-    },
-    {
-        "questionID": "P4",
-        "imageName": ".../../assets/quiz/banco.png",
-        "phase": "1",
-        "question": "Como se proteger contra golpes bancários?",
-        "answers": ["Olhar o nome de quem é o destinatário da transferência antes de enviar", "Usar no aplicativo bancário a mesma senha usada no e-mail", "Deixar senhas anotadas em papéis guardados na carteira", "Usar senhas curtas e fáceis de lembrar"],
-        "correct": "Olhar o nome de quem é o destinatário da transferência antes de enviar"
-    },
-    {
-        "questionID": "P5",
-        "imageName": ".../../assets/quiz/loja_online.png",
-        "phase": "1",
-        "question": "O que devemos suspeitar ao comprar em uma loja online? (Marque a opção incorreta)",
-        "answers": ["Valores muito abaixo do que é cobrado pelo mercado", "Falta de outras fontes de informações sobre a empresa na Internet", "Não é preciso suspeitar de lojas online, pois são todas seguras", "Avisos de que a promoção está acabando em poucos instantes"],
-        "correct": "Não é preciso suspeitar de lojas online, pois são todas seguras"
-    },
-    {
-        "questionID": "P6",
-        "imageName": ".../../assets/quiz/identidade.png",
-        "phase": "1",
-        "question": "Como devemos proteger a nossa identidade online?",
-        "answers": ["Usar a mesma senha em todas as nossas contas", "Atualizar regularmente as senhas das contas", "Ignorar as notificações de aviso de acesso da conta", "Fazer login com a conta em um site desconhecido"],
-        "correct": "Atualizar regularmente as senhas das contas"
-    },
-    {
-        "questionID": "P7",
-        "imageName": ".../../assets/quiz/caridade.png",
-        "phase": "1",
-        "question": "O que é importante verificar ao doar para caridade online?",
-        "answers": ["Clicar em qualquer link de doação e doar", "Não verificar a existência da organização", "Doar para organização popular independentemente da causa", "Verificar a existência da ONG"],
-        "correct": "Verificar a existência da ONG"
-    },
-    {
-        "questionID": "P8",
-        "imageName": ".../../assets/quiz/phishing.png",
-        "phase": "1",
-        "question": "Como identificar tentativas de phishing (roubo de dados pessoais)?",
-        "answers": ["Clicar rapidamente nos links recebidos por e-mails desconhecidos", "Fornecer as suas informações pessoais para qualquer site solicitado", "Verificar cuidadosamente os remetentes de e-mails", "Ignorar os avisos de segurança"],
-        "correct": "Verificar cuidadosamente os remetentes de e-mails"
-    },
-    {
-        "questionID": "P9",
-        "imageName": ".../../assets/quiz/proteger_senha.png",
-        "phase": "1",
-        "question": "Qual é a melhor prática para se proteger de golpes na internet?",
-        "answers": ["Compartilhar informações pessoais com estranhos", "Clicar em links suspeitos", "Manter senhas fortes e atualizadas", "Abrir anexos de e-mails de fontes desconhecidas"],
-        "correct": "Manter senhas fortes e atualizadas"
-    },
-    {
-        "questionID": "P10",
-        "imageName": ".../../assets/quiz/fake_news.png",
-        "phase": "1",
-        "question": "O que é uma notícia falsa (FakeNews)?",
-        "answers": ["Uma notícia sensacionalista publicada em um jornal de renome", "Uma notícia que contradiz suas crenças pessoais", "Uma notícia criada com o intuito de enganar e desinformar", "Uma notícia que não possui fontes citadas"],
-        "correct": "Uma notícia criada com o intuito de enganar e desinformar"
-    },
-    {
-        "questionID": "P11",
-        "imageName": ".../../assets/quiz/idoso.png",
-        "phase": "1",
-        "question": "Como não cair em golpes telefônicos?",
-        "answers": ["Sempre compartilhar informações pessoais por telefone", "Ignorar chamadas de números desconhecidos", "Atender a todas as chamadas sem questionar", "Fornecer senhas por telefone quando solicitado"],
-        "correct": "Ignorar chamadas de números desconhecidos"
-    },
-    {
-        "questionID": "P12",
-        "imageName": ".../../assets/quiz/proteger_golpes.png",
-        "phase": "1",
-        "question": "Qual é a melhor maneira de proteger suas senhas?",
-        "answers": ["Utilizar senhas curtas e fáceis de lembrar", "Manter a mesma senha para todas as contas", "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres", "Compartilhar senhas com amigos"],
-        "correct": "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres"
-    },
-    {
-        "questionID": "P13",
-        "imageName": ".../../assets/quiz/dispositivo_movel_virus.png",
-        "phase": "1",
-        "question": "Como evitar cair em golpes ao baixar aplicativos em dispositivos móveis?",
-        "answers": ["Baixar apenas aplicativos de fontes confiáveis", "Instalar qualquer aplicativo disponível em um site", "Compartilhar informações pessoais durante o processo", "Ignorar as permissões solicitadas pelos aplicativos"],
-        "correct": "Baixar apenas aplicativos de fontes confiáveis"
-    },
-    {
-        "questionID": "P14",
-        "imageName": ".../../assets/quiz/sorteio_online.png",
-        "phase": "1",
-        "question": "O que é importante considerar ao participar de sorteios online?",
-        "answers": ["Sempre fornecer todas as informações solicitadas", "Desconfiar de sorteios que exigem pagamento para participar", "Acreditar em todas as promoções sem questionar", "Participar de todos os sorteios disponíveis para aumentar as chances"],
-        "correct": "Desconfiar de sorteios que exigem pagamento para participar"
-    },
-    {
-        "questionID": "P15",
-        "imageName": ".../../assets/quiz/emprego_falsos.png",
-        "phase": "1",
-        "question": "Como evitar cair em golpes online de empregos falsos?",
-        "answers": ["Fornecer todas as suas informações pessoais", "Desconfiar de ofertas de emprego que parecem ser muito vantajosas", "Aceitar qualquer proposta sem verificar a autenticidade da empresa", "Divulgar informações pessoais nas redes sociais após receber uma oferta"],
-        "correct": "Desconfiar de ofertas de emprego que parecem ser muito vantajosas"
-    },
-    {
-        "questionID": "P16",
-        "imageName": ".../../assets/quiz/pedindo_dinheiro.png",
-        "phase": "1",
-        "question": "O que fazer ao receber mensagens suspeitas de amigos pedindo dinheiro através de redes sociais?",
-        "answers": ["Transferir dinheiro imediatamente sem questionar se a conta com foto é realmente da pessoa", "Verificar a autenticidade da mensagem através de outras formas de contato", "Ignorar a mensagem e não tomar nenhuma ação", "Compartilhar publicamente informações sobre a solicitação"],
-        "correct": "Verificar a autenticidade da mensagem através de outras formas de contato"
-    },
-    {
-        "questionID": "P17",
-        "imageName": ".../../assets/quiz/idoso.png",
-        "phase": "1",
-        "question": "Como se proteger contra golpes de phishing em mensagens de texto (SMS)?",
-        "answers": ["Clicar em todos os links recebidos via SMS", "Nunca verificar a origem de mensagens SMS", "Ignorar mensagens SMS suspeitas", "Responder a todas as mensagens SMS, mesmo de fontes desconhecidas"],
-        "correct": "Ignorar mensagens SMS suspeitas"
-    },
-    {
-        "questionID": "P18",
-        "imageName": ".../../assets/quiz/idoso.png",
-        "phase": "1",
-        "question": "O que fazer ao ver uma mensagem em um site indicando que seu dispositivo está em risco?",
-        "answers": ["Clicar no link para baixar imediatamente um programa para resolver o problema", "Executar o antivírus já instalado em seu dispositivo ou desconfiar da mensagem", "Confiar no site que indica o problema se ele tiver imagens de antivírus conhecidos", "Entrar em contato no link de contato por WhatsApp disponível no site"],
-        "correct": "Executar o antivírus já instalado em seu dispositivo ou desconfiar da mensagem"
-    },
-    {
-        "questionID": "P19",
-        "imageName": ".../../assets/quiz/idoso.png",
-        "phase": "1",
-        "question": "O que fazer ao suspeitar de uma oferta de investimento online?",
-        "answers": ["Investir imediatamente sem investigar", "Verificar a reputação da empresa e procurar avaliações", "Ligar para o telefone indicado na oferta", "Compartilhar a oferta com amigos sem verificar"],
-        "correct": "Verificar a reputação da empresa e procurar avaliações"
-    },
-    {
-        "questionID": "P20",
-        "imageName": ".../../assets/quiz/idoso.png",
-        "phase": "1",
-        "question": "Como evitar golpes em aplicativos de redes sociais?",
-        "answers": ["Compartilhar informações pessoais rapidamente", "Desconfiar de perfis com informações incompletas", "Confiar em todas as declarações feitas pelos usuários", "Nunca relatar comportamentos suspeitos"],
-        "correct": "Desconfiar de perfis com informações incompletas"
-    }
-
+    "questionID": "P11",
+    "imageName": ".../../assets/quiz/idoso.png",
+    "phase": "1",
+    "question": "Como não cair em golpes telefônicos?",
+    "answers": [
+      {
+        "text": "Sempre compartilhar informações pessoais por telefone",
+        "isCorrect": false,
+        "justification": "Golpistas podem usar suas informações para fraudes."
+      },
+      {
+        "text": "Ignorar chamadas de números desconhecidos",
+        "isCorrect": true,
+        "justification": "Evitar atender chamadas suspeitas reduz o risco de cair em golpes."
+      },
+      {
+        "text": "Atender a todas as chamadas sem questionar",
+        "isCorrect": false,
+        "justification": "Atender indiscriminadamente pode expor você a golpistas."
+      },
+      {
+        "text": "Fornecer senhas por telefone quando solicitado",
+        "isCorrect": false,
+        "justification": "Instituições sérias nunca pedem senhas por telefone."
+      }
+    ]
+  },
+  {
+    "questionID": "P12",
+    "imageName": ".../../assets/quiz/proteger_golpes.png",
+    "phase": "1",
+    "question": "Qual é a melhor maneira de proteger suas senhas?",
+    "answers": [
+      {
+        "text": "Utilizar senhas curtas e fáceis de lembrar",
+        "isCorrect": false,
+        "justification": "Senhas simples são facilmente quebradas."
+      },
+      {
+        "text": "Manter a mesma senha para todas as contas",
+        "isCorrect": false,
+        "justification": "Um vazamento compromete todas as suas contas."
+      },
+      {
+        "text": "Usar senhas com símbolos, números, com letras maiúsculas e minúsculas e 8 ou mais caracteres",
+        "isCorrect": true,
+        "justification": "Senhas fortes dificultam ataques de força bruta e adivinhação."
+      },
+      {
+        "text": "Compartilhar senhas com amigos",
+        "isCorrect": false,
+        "justification": "Compartilhar senhas compromete sua privacidade e segurança."
+      }
+    ]
+  },
+  {
+    "questionID": "P13",
+    "imageName": ".../../assets/quiz/dispositivo_movel_virus.png",
+    "phase": "1",
+    "question": "Como evitar cair em golpes ao baixar aplicativos em dispositivos móveis?",
+    "answers": [
+      {
+        "text": "Baixar apenas aplicativos de fontes confiáveis",
+        "isCorrect": true,
+        "justification": "Aplicativos oficiais passam por verificações de segurança."
+      },
+      {
+        "text": "Instalar qualquer aplicativo disponível em um site",
+        "isCorrect": false,
+        "justification": "Sites desconhecidos podem oferecer apps maliciosos."
+      },
+      {
+        "text": "Compartilhar informações pessoais durante o processo",
+        "isCorrect": false,
+        "justification": "Nunca forneça dados pessoais a aplicativos suspeitos."
+      },
+      {
+        "text": "Ignorar as permissões solicitadas pelos aplicativos",
+        "isCorrect": false,
+        "justification": "Permissões excessivas podem indicar aplicativos fraudulentos."
+      }
+    ]
+  },
+  {
+    "questionID": "P14",
+    "imageName": ".../../assets/quiz/sorteio_online.png",
+    "phase": "1",
+    "question": "O que é importante considerar ao participar de sorteios online?",
+    "answers": [
+      {
+        "text": "Sempre fornecer todas as informações solicitadas",
+        "isCorrect": false,
+        "justification": "Sorteios legítimos não pedem dados sensíveis."
+      },
+      {
+        "text": "Desconfiar de sorteios que exigem pagamento para participar",
+        "isCorrect": true,
+        "justification": "Sorteios sérios nunca cobram taxas de participação."
+      },
+      {
+        "text": "Acreditar em todas as promoções sem questionar",
+        "isCorrect": false,
+        "justification": "É preciso verificar a veracidade antes de acreditar."
+      },
+      {
+        "text": "Participar de todos os sorteios disponíveis para aumentar as chances",
+        "isCorrect": false,
+        "justification": "Participar indiscriminadamente aumenta o risco de golpes."
+      }
+    ]
+  },
+  {
+    "questionID": "P15",
+    "imageName": ".../../assets/quiz/emprego_falsos.png",
+    "phase": "1",
+    "question": "Como evitar cair em golpes online de empregos falsos?",
+    "answers": [
+      {
+        "text": "Fornecer todas as suas informações pessoais",
+        "isCorrect": false,
+        "justification": "Golpistas pedem dados para aplicar fraudes."
+      },
+      {
+        "text": "Desconfiar de ofertas de emprego que parecem ser muito vantajosas",
+        "isCorrect": true,
+        "justification": "Propostas boas demais geralmente são golpes."
+      },
+      {
+        "text": "Aceitar qualquer proposta sem verificar a autenticidade da empresa",
+        "isCorrect": false,
+        "justification": "Sempre pesquise a empresa antes de aceitar."
+      },
+      {
+        "text": "Divulgar informações pessoais nas redes sociais após receber uma oferta",
+        "isCorrect": false,
+        "justification": "Expor dados pode facilitar golpes e clonagem de identidade."
+      }
+    ]
+  },
+  {
+    "questionID": "P16",
+    "imageName": ".../../assets/quiz/pedindo_dinheiro.png",
+    "phase": "1",
+    "question": "O que fazer ao receber mensagens suspeitas de amigos pedindo dinheiro através de redes sociais?",
+    "answers": [
+      {
+        "text": "Transferir dinheiro imediatamente sem questionar se a conta com foto é realmente da pessoa",
+        "isCorrect": false,
+        "justification": "Golpistas usam contas clonadas para pedir dinheiro."
+      },
+      {
+        "text": "Verificar a autenticidade da mensagem através de outras formas de contato",
+        "isCorrect": true,
+        "justification": "Confirmar com a pessoa por outro meio evita cair no golpe."
+      },
+      {
+        "text": "Ignorar a mensagem e não tomar nenhuma ação",
+        "isCorrect": false,
+        "justification": "Ignorar pode não resolver, é melhor confirmar a situação."
+      },
+      {
+        "text": "Compartilhar publicamente informações sobre a solicitação",
+        "isCorrect": false,
+        "justification": "Isso expõe informações sensíveis sem resolver o problema."
+      }
+    ]
+  },
+  {
+    "questionID": "P17",
+    "imageName": ".../../assets/quiz/idoso.png",
+    "phase": "1",
+    "question": "Como se proteger contra golpes de phishing em mensagens de texto (SMS)?",
+    "answers": [
+      {
+        "text": "Clicar em todos os links recebidos via SMS",
+        "isCorrect": false,
+        "justification": "Links em SMS suspeitos geralmente levam a sites fraudulentos."
+      },
+      {
+        "text": "Nunca verificar a origem de mensagens SMS",
+        "isCorrect": false,
+        "justification": "Mensagens falsas podem se passar por instituições sérias."
+      },
+      {
+        "text": "Ignorar mensagens SMS suspeitas",
+        "isCorrect": true,
+        "justification": "Ignorar mensagens suspeitas evita cair em golpes."
+      },
+      {
+        "text": "Responder a todas as mensagens SMS, mesmo de fontes desconhecidas",
+        "isCorrect": false,
+        "justification": "Responder confirma seu número para golpistas."
+      }
+    ]
+  },
+  {
+    "questionID": "P18",
+    "imageName": ".../../assets/quiz/idoso.png",
+    "phase": "1",
+    "question": "O que fazer ao ver uma mensagem em um site indicando que seu dispositivo está em risco?",
+    "answers": [
+      {
+        "text": "Clicar no link para baixar imediatamente um programa para resolver o problema",
+        "isCorrect": false,
+        "justification": "Sites falsos induzem a baixar softwares maliciosos."
+      },
+      {
+        "text": "Executar o antivírus já instalado em seu dispositivo ou desconfiar da mensagem",
+        "isCorrect": true,
+        "justification": "Seu antivírus legítimo é a forma correta de verificar."
+      },
+      {
+        "text": "Confiar no site que indica o problema se ele tiver imagens de antivírus conhecidos",
+        "isCorrect": false,
+        "justification": "Golpistas usam imagens falsas para dar credibilidade."
+      },
+      {
+        "text": "Entrar em contato no link de contato por WhatsApp disponível no site",
+        "isCorrect": false,
+        "justification": "Esse contato geralmente leva direto ao golpista."
+      }
+    ]
+  },
+  {
+    "questionID": "P19",
+    "imageName": ".../../assets/quiz/idoso.png",
+    "phase": "1",
+    "question": "O que fazer ao suspeitar de uma oferta de investimento online?",
+    "answers": [
+      {
+        "text": "Investir imediatamente sem investigar",
+        "isCorrect": false,
+        "justification": "Investir sem checar pode levar a grandes prejuízos."
+      },
+      {
+        "text": "Verificar a reputação da empresa e procurar avaliações",
+        "isCorrect": true,
+        "justification": "Pesquisar evita cair em esquemas fraudulentos."
+      },
+      {
+        "text": "Ligar para o telefone indicado na oferta",
+        "isCorrect": false,
+        "justification": "O contato fornecido pode ser parte do golpe."
+      },
+      {
+        "text": "Compartilhar a oferta com amigos sem verificar",
+        "isCorrect": false,
+        "justification": "Isso espalha golpes e expõe mais pessoas ao risco."
+      }
+    ]
+  },
+  {
+    "questionID": "P20",
+    "imageName": ".../../assets/quiz/idoso.png",
+    "phase": "1",
+    "question": "Como evitar golpes em aplicativos de redes sociais?",
+    "answers": [
+      {
+        "text": "Compartilhar informações pessoais rapidamente",
+        "isCorrect": false,
+        "justification": "Informações pessoais podem ser usadas para golpes."
+      },
+      {
+        "text": "Desconfiar de perfis com informações incompletas",
+        "isCorrect": true,
+        "justification": "Perfis incompletos podem indicar contas falsas."
+      },
+      {
+        "text": "Confiar em todas as declarações feitas pelos usuários",
+        "isCorrect": false,
+        "justification": "Nem todos os usuários são confiáveis."
+      },
+      {
+        "text": "Nunca relatar comportamentos suspeitos",
+        "isCorrect": false,
+        "justification": "Relatar ajuda a plataforma a combater golpistas."
+      }
+    ]
+  }
 ]

@@ -43,7 +43,8 @@ const Quiz = () => {
   const handleAnswerClick = async (answer, index) => {
     setIsButtonDisabled(true);
     const currentQuestion = questions[currentQuestionIndex];
-    const isCorrect = answer === currentQuestion.correct;
+    const currentAnswer = currentQuestion.answers[index]; // pega objeto {text, isCorrect, justification}
+    const isCorrect = currentAnswer.isCorrect;
 
     setSelectedAnswerIndex(index);
     setIsAnswerCorrect(isCorrect);
@@ -53,8 +54,8 @@ const Quiz = () => {
       idApp: "WEB-EVITE-O-GOLPE 1.0",
       phase: "1",
       activity: currentQuestion.questionID,
-      userResponse: answer,
-      expectedResponse: currentQuestion.correct,
+      userResponse: currentAnswer.text,
+      expectedResponse: currentQuestion.answers.find(a => a.isCorrect).text,
       question: currentQuestion.question,
       isCorrect: isCorrect,
       dateResponse: new Date().toISOString(),
@@ -92,7 +93,10 @@ const Quiz = () => {
         }, 2000);
         return prev + 1;
       });
-      toast.error("Não é bem isso. Tente novamente", { autoClose: 2000 });
+      toast.error(
+        `Não é bem isso. ${currentAnswer.justification}`,
+        { autoClose: 3000 }
+      );
     }
   };
 
@@ -120,7 +124,11 @@ const Quiz = () => {
       <div className={styles.content}>
         {questions.length > 0 && (
           <>
-            <img className={styles.imagemQuiz} src={questions[currentQuestionIndex].imageName} alt="Imagem referente a questão" />
+            <img
+              className={styles.imagemQuiz}
+              src={questions[currentQuestionIndex].imageName}
+              alt="Imagem referente a questão"
+            />
             <div className={styles.buttonContainer}>
               <h3 className={styles.title}>{questions[currentQuestionIndex].question}</h3>
               {questions[currentQuestionIndex].answers.map((answer, idx) => (
@@ -130,7 +138,7 @@ const Quiz = () => {
                   onClick={() => handleAnswerClick(answer, idx)}
                   disabled={isButtonDisabled}
                 >
-                  {answer}
+                  {answer.text}
                 </button>
               ))}
             </div>
@@ -139,6 +147,6 @@ const Quiz = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Quiz;

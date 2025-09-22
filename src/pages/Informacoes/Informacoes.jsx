@@ -16,7 +16,7 @@ const Informacoes = () => {
                     <ul className={styles.listaDicas}>
                         <li>Não use senhas fáceis. Tente incorporar números, caracteres especiais e varie entre maiúsculas e minúsculas para aumentar a segurança da sua senha.</li>
                         <li>Se uma oferta parece boa demais para ser verdade, provavelmente não é legítima. Promoções com preços muito abaixo do mercado podem ser um indicativo de fraude.</li>
-                        <li>Evite clicar em links ou abrir anexos de mensagens não solicitadas ou de remetentes desconhecidos, pois podem fazer com que programas maliciosos que podem danificar seu dispositivo ou compartilhar seus dados</li>
+                        <li>Evite clicar em links ou abrir anexos de mensagens não solicitadas ou de remetentes desconhecidos, pois podem fazer com que programas maliciosos que podem danificar seu dispositivo ou compartilhar seus dados.</li>
                     </ul>
                 </div>
 

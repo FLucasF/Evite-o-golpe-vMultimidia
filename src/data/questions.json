@@ -281,7 +281,7 @@
     },
     {
     "questionID": "P11",
-    "imageName": ".../../assets/quiz/idoso.png",
+    "imageName": ".../../assets/quiz/golpes_telefonicos.png",
     "phase": "1",
     "question": "Como não cair em golpes telefônicos?",
     "answers": [
@@ -449,7 +449,7 @@
   },
   {
     "questionID": "P17",
-    "imageName": ".../../assets/quiz/idoso.png",
+    "imageName": ".../../assets/quiz/golpes_phishing.png",
     "phase": "1",
     "question": "Como se proteger contra golpes de phishing em mensagens de texto (SMS)?",
     "answers": [
@@ -477,7 +477,7 @@
   },
   {
     "questionID": "P18",
-    "imageName": ".../../assets/quiz/idoso.png",
+    "imageName": ".../../assets/quiz/dispositivo_risco.png",
     "phase": "1",
     "question": "O que fazer ao ver uma mensagem em um site indicando que seu dispositivo está em risco?",
     "answers": [
@@ -505,7 +505,7 @@
   },
   {
     "questionID": "P19",
-    "imageName": ".../../assets/quiz/idoso.png",
+    "imageName": ".../../assets/quiz/investimento_online.png",
     "phase": "1",
     "question": "O que fazer ao suspeitar de uma oferta de investimento online?",
     "answers": [
@@ -533,7 +533,7 @@
   },
   {
     "questionID": "P20",
-    "imageName": ".../../assets/quiz/idoso.png",
+    "imageName": ".../../assets/quiz/golpes_aplicativos.png",
     "phase": "1",
     "question": "Como evitar golpes em aplicativos de redes sociais?",
     "answers": [

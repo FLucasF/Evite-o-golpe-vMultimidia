@@ -78,7 +78,7 @@ const Quiz = () => {
           setSelectedAnswerIndex(null);
           setIsAnswerCorrect(null);
           setIsButtonDisabled(false);
-        }, 2000);
+        }, 3000);
 
         return updatedCount;
       });
@@ -90,12 +90,12 @@ const Quiz = () => {
           setSelectedAnswerIndex(null);
           setIsAnswerCorrect(null);
           setIsButtonDisabled(false);
-        }, 2000);
+        }, 4000);
         return prev + 1;
       });
       toast.error(
         `Não é bem isso. ${currentAnswer.justification}`,
-        { autoClose: 3000 }
+        { autoClose: 4000}
       );
     }
   };

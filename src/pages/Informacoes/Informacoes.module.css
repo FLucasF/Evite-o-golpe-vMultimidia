@@ -32,12 +32,13 @@ body {
   font-size: 24px;
   color: #07377A;
   padding: 20px 0;
+  margin-bottom: 0;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
   flex-direction: column; 
   width: 100%; /* Garante que o contêiner use toda a largura disponível */
@@ -57,7 +58,7 @@ body {
 }
 
 .containerPrimario, .containerSecundario, .containerTerciario, .containerQuaternario, .profileContainerWrapper {
-  padding: 20px;
+  padding: 20px 30px 20px 30px;
   margin: 10px;
   font-size: 18px;
   background-color: #f4f4f4;
@@ -89,7 +90,7 @@ body {
 }
 
 .lista li {
-  padding: 10px;
+  padding: 7px;
   background-color: #e6e6e6;
   border-radius: 5px;
   margin-bottom: 10px;

@@ -1,5 +1,42 @@
 @import '../../styles/variables.css';
 
+:global(.Toastify__toast-container--top-center) {
+  top: 80px !important;
+  width: 100% !important;
+  left: 50.5% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+:global(.Toastify__toast) {
+  width: auto !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  max-width: 500px !important;
+}
+
+:global(.Toastify__toast--error) {
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+}
+
+@media (max-width: 600px) {
+  :global(.Toastify__toast-container--top-center) {
+    position: fixed !important; 
+    top: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 95% !important;
+  }
+  
+  :global(.Toastify__toast) {
+    min-width: 90% !important;
+    max-width: 95% !important;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +50,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color);
-
 }
 
 .content {
@@ -23,6 +59,7 @@
   text-align: center;
   padding: 20px;
   max-width: 700px;
+  min-height: 750px;
   height: 750px;
   background-color: var(--second-bg-color);
   border-radius: 10px;

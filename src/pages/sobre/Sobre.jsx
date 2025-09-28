@@ -2,7 +2,8 @@ import React from 'react';
 import profileImageAyla from '../../assets/Ayla.png';
 import profileImageLucas from '../../assets/Lucas.png';
 import profileImageDavid from '../../assets/David.png';
-import profileImageNathalia from '../../assets/Nathalia.png'
+import profileImageNathalia from '../../assets/Nathalia.png';
+import profileImageJose from '../../assets/Yago.png';
 import styles from './Sobre.module.css';
 
 const Sobre = () => {
@@ -30,6 +31,14 @@ const Sobre = () => {
                                 <a href="https://www.linkedin.com/in/nathalia-nascimento-a3104b24a/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                             </div>
                         </div>
+                        <div className={styles.profileContent}>
+                            <img className={styles.profileImage} src={profileImageJose} alt="Profile da pessoa" />
+                            <div className={styles.profileText}>
+                                <h1>José Yago</h1>
+                                <p>Graduando em Licenciatua em Ciência da Computação no campus IV da UFPB, em Rio Tinto-PB. Áreas de Interesse: Tecnologias Educacionais, Pensamento Computacional, HTML, CSS, Testes</p>
+                                <a href="https://www.linkedin.com/in/jos%C3%A9-oliveira-8427ba26a/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={styles.profileRow}>
@@ -50,16 +59,6 @@ const Sobre = () => {
                                 <a href="https://www.linkedin.com/in/david-gon%C3%A7alves-maia-a51218212/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                             </div>
                         </div>
-
-                        <div className={styles.profileContent}>
-                            <img className={styles.profileImage} src={profileImageDavid} alt="Profile da pessoa" />
-                            <div className={styles.profileText}>
-                                <h1>José Yago</h1>
-                                <p>Graduando em Licenciatua em Ciência da Computação no campus IV da UFPB, em Rio Tinto-PB. Áreas de Interesse: Tecnologias Educacionais, Pensamento Computacional, HTML, CSS, Testes</p>
-                                <a href="" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>

@@ -24,6 +24,7 @@ body {
   text-align: center;
   background-color: var(--backgroundClaro);
   width: 100%;
+  margin: 10px 0 10px 0;
   overflow-x: hidden; /* Evita rolagem horizontal no contêiner */
 }
 

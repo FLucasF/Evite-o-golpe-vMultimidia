@@ -43,7 +43,7 @@ const Quiz = () => {
   const handleAnswerClick = async (answer, index) => {
     setIsButtonDisabled(true);
     const currentQuestion = questions[currentQuestionIndex];
-    const currentAnswer = currentQuestion.answers[index]; // pega objeto {text, isCorrect, justification}
+    const currentAnswer = currentQuestion.answers[index];
     const isCorrect = currentAnswer.isCorrect;
 
     setSelectedAnswerIndex(index);
@@ -61,8 +61,6 @@ const Quiz = () => {
       dateResponse: new Date().toISOString(),
       typeOfQuestion: "MULTIPLA ESCOLHA"
     };
-
-    await saveResponseQuestion(response);
 
     if (isCorrect) {
       setCorrectCount(prev => {

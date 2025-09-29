@@ -28,12 +28,12 @@
     top: 50px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    width: 95% !important;
+    width: 85% !important;
   }
   
   :global(.Toastify__toast) {
     min-width: 90% !important;
-    max-width: 95% !important;
+    max-width: 90% !important;
   }
 }
 

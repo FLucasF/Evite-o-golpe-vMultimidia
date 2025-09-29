@@ -33,7 +33,6 @@ const InformacaoUsuario = () => {
     // 1. AÇÕES IMEDIATAS PARA O USUÁRIO
     sessionStorage.setItem('userID', 'Anonymous');
     navigate('/Quiz');
-
     // 2. A REQUISIÇÃO É ENVIADA EM SEGUNDO PLANO
     axios.post(API_URL, { userID: 'Anonymous' })
       .then(response => {

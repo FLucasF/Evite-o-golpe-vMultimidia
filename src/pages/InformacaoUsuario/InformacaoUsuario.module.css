@@ -1,9 +1,9 @@
 .container {
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   padding-top: 8rem;
-  height: 100vh; /* Full viewport height to center vertically in the whole view */
-  width: 100vw; /* Full viewport width */
+  height: 100vh;
+  width: 100vw;
 }
 
 .container p {
@@ -11,7 +11,7 @@ padding-bottom: 1rem;
 font-size: 2rem;
 }
 .content {
-text-align: center; /* Centers the text within the content div */
+text-align: center;
 }
 
 .content h2 {
@@ -34,17 +34,17 @@ padding-bottom: 2rem;
 }
 
 .buttonContainer button, .noStyleLink {
-  display: block; /* Faz o botão preencher o container */
-  margin: 0 auto; /* Centraliza o botão horizontalmente */
-  background-color: var(--fontColorAmarelo); /* Cor de fundo */
-  color: var(--fontColor); /* Cor do texto, corrigir a variável se necessário */
+  display: block; 
+  margin: 0 auto;
+  background-color: var(--fontColorAmarelo); 
+  color: var(--fontColor);
   border-radius: 7px;
   width: 200px;
   height: 60px;
   box-shadow: 0 8px 5px #07377a3f;
-  font-size: 2rem; /* Ajustar para tamanho legível */
+  font-size: 2rem; 
   font-weight: bold;
-  cursor: pointer; /* Estilo do cursor ao passar sobre o botão */
+  cursor: pointer;
 }
 
 .buttonContainer button:hover {
@@ -56,15 +56,14 @@ padding-bottom: 2rem;
   height: 65px;
 }
 
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
   .container {
-    padding-top: 2rem; /* Reduz o padding superior para menos espaço acima */
-    height: auto; /* Remove a altura fixa para permitir ajuste ao conteúdo */
+    padding-top: 2rem;
+    height: auto; 
   }
 
   .container p {
-    padding-bottom: 0.5rem; /* Menor espaço abaixo dos parágrafos */
+    padding-bottom: 0.5rem;
   }
 
   .content input {
@@ -73,16 +72,16 @@ padding-bottom: 2rem;
   }
 
   .content {
-    padding: 0.5rem; /* Adiciona padding para evitar que o conteúdo fique muito grudado nas bordas */
+    padding: 0.5rem;
   }
 
   .content h2 {
-    font-size: 1.5rem; /* Reduz o tamanho da fonte para h2 para melhor leitura em telas pequenas */
-    padding-bottom: 1rem; /* Menor espaço abaixo dos h2 */
+    font-size: 1.5rem; 
+    padding-bottom: 1rem; 
   }
 
   .content form {
-    padding-bottom: 1rem; /* Menor espaço abaixo dos formulários */
+    padding-bottom: 1rem; 
   }
 
   .content p {
@@ -90,23 +89,23 @@ padding-bottom: 2rem;
   }
 
   .buttonContainer {
-    padding-bottom: 0.5rem; /* Menor espaço abaixo do container de botão */
+    padding-bottom: 0.5rem;
     
   }
 
   .buttonContainer button {
-    width: 20%; /* Aumenta a largura dos botões para melhor acessibilidade */
+    width: 20%; 
     height: 2rem;
-    font-size: 0.8rem; /* Reduz o tamanho da fonte para adaptação em telas menores */
+    font-size: 0.8rem; 
   }
 
   .buttonContainer button:hover {
-    background-color: var(--colorYellowHover); /* Mantém a cor de hover */
+    background-color: var(--colorYellowHover); 
   }
 
   .noStyleLink {
-    width: 50%; /* Aumenta a largura do link para melhor acessibilidade */
+    width: 50%; 
     height: 2rem;
-    font-size: 0.8rem; /* Reduz o tamanho da fonte para adaptação em telas menores */
+    font-size: 0.8rem;
   }
 }

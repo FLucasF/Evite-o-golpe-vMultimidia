@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import imagem from '../../assets/idoso.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import styles from '../FinalDoQuiz/FinalDoQuiz.module.css';
+import styles from './FinalDoQuiz.module.css';
+import ImageFinalQuiz from '../../assets/ImagemFinalQuiz.png';
 
 function FinalDoQuiz() {
     const navigate = useNavigate();
@@ -16,8 +16,8 @@ function FinalDoQuiz() {
         navigate('/');
     };
     
-    const handleNavigateQuiz = () => {
-        navigate('/');
+    const handleRestartQuiz = () => {
+        navigate('/InformacaoUsuario');
     };
 
     const openFeedbackForm = () => {
@@ -27,16 +27,23 @@ function FinalDoQuiz() {
     return (
         <div className={styles.finalPageContainer}>
             <h1>Parabéns por finalizar o quiz!</h1>
-            <img className={styles.imagem} src={imagem} alt="Imagem de parabens por ter terminado" />
-            <button type="button" onClick={handleNavigateHome} className={styles.btnVoltar}>
-                <i className="bi bi-chevron-left"></i></button>
-            <button type="button" onClick={handleNavigateQuiz} className={styles.btnReinciar}>
-                <i className="bi bi-arrow-repeat"></i></button>
-            <h2>Tentativas totais: {totalAttempts}</h2>
-            <h2>Acertos: {correctAnswers}</h2>
-            <h2>Tentativas erradas: {errors}</h2>
-            <h2>Desempenho geral: {performance.toFixed(2)}%</h2>
+            <img className={styles.imagem} src={ImageFinalQuiz} alt="Mascote comemorando o fim do quiz" />
+            <div className={styles.statsContainer}>
+                <h2>Tentativas totais: {totalAttempts}</h2>
+                <h2>Acertos: {correctAnswers}</h2>
+                <h2>Tentativas erradas: {errors}</h2>
+                <h2>Desempenho geral: {performance.toFixed(2)}%</h2>
+            </div>
+            
             <button type="button" onClick={openFeedbackForm} className={styles.btnFeedBack}>FeedBack</button>
+
+            <button type="button" onClick={handleNavigateHome} className={styles.btnVoltar}>
+                <i className="bi bi-chevron-left"></i>
+            </button>
+            
+            <button type="button" onClick={handleRestartQuiz} className={styles.btnReinciar}>
+                <i className="bi bi-arrow-repeat"></i>
+            </button>
         </div>
     );
 }

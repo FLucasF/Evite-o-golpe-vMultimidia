@@ -1,59 +1,145 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Tutorial.module.css';
-import acertando from '../../assets/tutorial/acertando_quiz.png';
-import errando from '../../assets/tutorial/errando_quiz.png';
-import feedback from '../../assets/tutorial/feedback.png';
-import maisInformacoes from '../../assets/tutorial/mais_informacoes.png';
-import finalQuiz from '../../assets/tutorial/final_quiz.png';
-import navbar from '../../assets/tutorial/navbar.png';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+import imageTabletAcena from '../../../public/img/tablet_acena.png';
+import imageTabletPensa from '../../../public/img/tablet_pensa.png';
+import imageTabletExplica from '../../../public/img/tablet_explica.png';
+import imageTabletComemora from '../../../public/img/tablet_comemora.png';
+import imageTabletEstuda from '../../../public/img/tablet_estuda.png';
+import imageTabletAnota from '../../../public/img/tablet_anota.png';
+
+import imagePrintHome from '../../assets/printHome.png';
+import imagePrintQuiz from '../../assets/printQuiz.png';
+import imagePrintCertoErrado from '../../assets/printQuizCertoErrado.png';
+import imagePrintFinalQuiz from '../../assets/printFinalQuiz.png';
+import imagePrintMaisInfo from '../../assets/printMaisInfo.png';
+import imagePrintFeedback from '../../assets/printFeedback.png';
+
+const slidesData = [
+  {
+    tabletImage: imageTabletAcena, 
+    tabletPhrase: 'Olá! Sou seu guia no \'Evite o Golpe\'. Vou te mostrar como se proteger online. Vamos começar?',
+    title: 'Passo 1: O Ponto de Partida',
+    description: 'Tudo começa na tela inicial. Aqui, você pode ir direto para o nosso quiz de segurança ou navegar pelo menu para explorar outras áreas.',
+    actionHint: 'Clique em "Iniciar" para testar seus conhecimentos!',
+    imagePlaceholder: imagePrintHome
+  },
+  {
+    tabletImage: imageTabletPensa, 
+    tabletPhrase: 'É hora de se testar! Cada pergunta é uma chance de aprender a identificar um golpe.',
+    title: 'Passo 2: O Desafio do Quiz',
+    description: 'Você encontrará uma série de perguntas sobre situações comuns do dia a dia. Leia com atenção e escolha a alternativa que parece mais segura.',
+    actionHint: 'Escolha a alternativa que você acredita ser a correta.',
+    imagePlaceholder: imagePrintQuiz
+  },
+  {
+    tabletImage: imageTabletExplica, 
+    tabletPhrase: 'Não se preocupe em errar! O mais importante é entender o porquê de cada resposta.',
+    title: 'Passo 3: Aprenda na Hora',
+    description: 'Após cada resposta, você receberá um feedback instantâneo. Verde se acertou, e vermelho se errou, sempre com uma explicação clara para você não cair em armadilhas no futuro.',
+    actionHint: 'Leia o feedback para fixar o aprendizado!',
+    imagePlaceholder: imagePrintCertoErrado
+  },
+  {
+    tabletImage: imageTabletComemora, 
+    tabletPhrase: 'Veja como você se saiu! Todo conhecimento adquirido é uma vitória contra os golpes.',
+    title: 'Passo 4: Seu Resultado Final',
+    description: 'Ao final do quiz, você verá sua pontuação completa, incluindo o número de acertos e erros. Use isso para avaliar quais áreas você já domina!',
+    actionHint: 'Confira seu desempenho e sinta-se mais seguro!',
+    imagePlaceholder: imagePrintFinalQuiz
+  },
+  {
+    tabletImage: imageTabletEstuda, 
+    tabletPhrase: 'O aprendizado não termina no quiz. Temos uma biblioteca de conhecimento para você!',
+    title: 'Passo 5: Aprofunde seus Conhecimentos',
+    description: 'Na seção "Mais Informações", você encontra dicas de segurança, artigos e links para sites confiáveis. É um ótimo lugar para continuar aprendendo.',
+    actionHint: 'Explore a seção "Mais Informações" no menu superior.',
+    imagePlaceholder: imagePrintMaisInfo
+  },
+  {
+    tabletImage: imageTabletAnota,
+    tabletPhrase: 'Sua opinião é super importante para mim! Me ajude a deixar o \'Evite o Golpe\' ainda melhor.',
+    title: 'Passo 6: Contribua com seu Feedback',
+    description: 'Gostou do site? Tem alguma sugestão? Clique na opção "Feedback" no menu a qualquer momento para nos enviar sua mensagem. Nós lemos tudo!',
+    actionHint: 'Sempre que tiver uma ideia, use o botão "Feedback"!',
+    imagePlaceholder: imagePrintFeedback
+  }
+];
 
 const Tutorial = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev === slidesData.length - 1 ? prev : prev + 1));
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? prev : prev - 1));
+  };
+
+  const currentSlideData = slidesData[currentSlide];
+
   return (
-    <div>
-      <div className={styles.container}>
-        <h2>Sobre o quiz:</h2>
-        <p>O quiz é composto por um total de cinco perguntas. Na tela apresentada, há uma única pergunta e quatro opções de resposta, 
-          das quais apenas uma é a opção correta. Ao selecionar uma alternativa: Se a resposta escolhida for <span><strong>incorreta</strong></span>, 
-          ela será destacada em vermelho, indicando que você deve tentar novamente.</p>
-        <img className={styles.imageErro} src={errando} alt="Imagem de erro" />
-        <p>Se a resposta for <span><strong>correta</strong></span>, ela será destacada em verde, confirmando sua escolha correta e permitindo que você avance para a próxima pergunta.</p>
-        <img className={styles.imageAcerto} src={acertando} alt="Imagem de acerto" />
-        <p>Após responder corretamente a todas as cinco que são sorteadas, o aplicativo fornecerá um feedback final, mostrando o número total de acertos e erros que você obteve durante o quiz.</p>
-      </div>
-      
-      <div className={styles.container}>
-        <h2>Sobre o Feedback:</h2>
-        <p>Para acessar o formulário de feedback do quiz, clique no item "Feedback" no menu de navegação. 
-          Isso o direcionará ao formulário onde você pode compartilhar suas impressões e comentários sobre a experiência do quiz.</p>
-        <img className={styles.imageFeedback} src={feedback} alt="Imagem do feedback" />
-      </div>
-      
-      <div className={styles.container}>
-        <h2>Mais informações:</h2>
-        <p>Para obter mais informações, clique no item "Mais Informações" no menu de navegação. Lá, você encontrará uma variedade de materiais,
-           incluindo vídeos e páginas detalhadas sobre os possíveis golpes. Esta seção é uma excelente fonte de recursos para aprofundar seu conhecimento e evitar fraudes.</p>
-        <img className={styles.imageInfo} src={maisInformacoes} alt="Imagem da informação" />
+    <div className={styles.pageContainer}>
+      <div className={styles.tabletGuide}>
+        <img src={currentSlideData.tabletImage} alt="Tablet personagem falando" className={styles.tabletImage} />
+        <div className={styles.speechBubble}>
+          {currentSlideData.tabletPhrase}
+        </div>
       </div>
 
-      <div className={styles.container}>
-        <h2>Sobre o final do quiz:</h2>
-        <p>A tela final do quiz é apresentada após a conclusão de todas as perguntas. No centro da tela são exibidas as estatísticas do seu desempenho no quiz: 
-        tentativas totais, acertos, tentativas erradas e desempenho geral em porcentagem. 
-        Você tem a opção de fornecer feedback clicando no botão "Feedback" no centro da tela. 
-        Além disso, há ícones de navegação para voltar à tela anterior ou reiniciar o quiz, localizados nos cantos inferiores esquerdo e direito, respectivamente.</p>
-        <img className={styles.imageFinal} src={finalQuiz} alt="Imagem final" />
+      <div className={styles.carouselContainer}>
+        <button
+          className={`${styles.navArrow} ${styles.leftArrow}`}
+          onClick={handlePrev}
+          disabled={currentSlide === 0}
+        >
+          <FaChevronLeft />
+        </button>
+
+        <div className={styles.carouselViewport}>
+          <div
+            className={styles.slidesTrack}
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {slidesData.map((slide, index) => (
+              <div className={styles.slide} key={index}>
+                <h2 className={styles.slideTitle}>{slide.title}</h2>
+                <p className={styles.slideDescription}>{slide.description}</p>
+                <div className={styles.actionPrompt}>
+                  <span>{slide.actionHint}</span>
+                </div>
+                <img 
+                  src={slide.imagePlaceholder} 
+                  alt={slide.title}
+                  className={styles.imagePlaceholder} 
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          className={`${styles.navArrow} ${styles.rightArrow}`}
+          onClick={handleNext}
+          disabled={currentSlide === slidesData.length - 1}
+        >
+          <FaChevronRight />
+        </button>
       </div>
 
-      <div className={styles.container}>
-        <h2>Sobre o navbar:</h2>
-        <p>A barra de navegação localizada no topo da tela contém links para as principais seções do site, 
-        incluindo Home, Quiz, Tutorial, Mais Informações e Feedback. 
-        Ela permite uma navegação fácil e rápida entre as diferentes partes do site.</p>
-        <img className={styles.imageNav} src={navbar} alt="Imagem do navbar" />
+      <div className={styles.dotsContainer}>
+        {slidesData.map((_, index) => (
+          <div
+            key={index}
+            className={`${styles.dot} ${currentSlide === index ? styles.activeDot : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          ></div>
+        ))}
       </div>
-
     </div>
   );
-}
+};
 
 export default Tutorial;
